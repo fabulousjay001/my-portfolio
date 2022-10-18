@@ -9,12 +9,14 @@ const NavBar = () => {
     <div className={classes.root}>
       <div className={classes.nav}>
         <div className={classes.logo}>
-          <h1>Fab JAY</h1>
+          <h1> Fab JAY</h1>
         </div>
         <div className={classes.icon}>
-          {/* <a href='instagram.com'>{InstagramIcon}</a> */}
-        </div>
-        <div className={classes.navItems}>
+          <div className={classes.navItems}>
+            <InstagramIcon />
+            <TwitterIcon />
+            <LinkedInIcon />
+          </div>
           <ul className={classes.listContainer}>
             <a href="#" className={classes.listItem}>
               <li>Home</li>

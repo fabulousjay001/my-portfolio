@@ -1,8 +1,8 @@
-import { Button } from "@mui/material";
 import { useProfileStyles } from "./styles";
 import Typical from "react-typical";
 import { Data } from "./Data";
 import Images from "../../../src/images/prof-pic.jpg";
+import Button from "../Button/Button";
 
 const Profile = () => {
   const classes = useProfileStyles();
@@ -32,12 +32,11 @@ const Profile = () => {
           </span>
           <div className={classes.option}>
             <button className={classes.hire}> Hire Me</button>
-            <a href="Ay.pdf" download="Ay.pdf">
-              <button className={classes.button}> Download Resume</button>
+            <a href="" download="Ay.pdf">
+              <Button download="Download"/>
             </a>
           </div>
         </div>
-
         <div className={classes.headerImage}>
           <img src={Images} className={classes.headerImage}></img>
         </div>

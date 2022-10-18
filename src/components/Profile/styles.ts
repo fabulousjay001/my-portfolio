@@ -8,7 +8,7 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     top: theme.spacing(0),
   },
   header: {
-    // color: theme.design.ayo.waz_gold,
+    fontSize: theme.spacing(5),
   },
   profileDetails: {
     position: "absolute",
@@ -18,20 +18,25 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     justifyContent: "space-around",
     color: theme.design.ayo.white,
   },
-  profileDetailsRole: {},
+  profileDetailsRole: {
+    width: "90%",
+  },
 
   headerImage: {
+    position: "absolute",
     height: "60vh",
     borderRadius: "50%",
+    margin: theme.spacing(5, 5, 0, 5),
   },
   image: {},
   text: {
     color: theme.design.ayo.waz_white,
+    fontSize: theme.spacing(3),
   },
   wrapper: {
     marginTop: 0,
   },
-  tagLine: {},
+  tagLine: { fontSize: theme.spacing(2.5) },
   option: {
     marginTop: theme.spacing(5),
     display: "flex",
@@ -39,16 +44,17 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     width: theme.spacing(30),
   },
   hire: {},
-  button: {
-    background: theme.design.ayo.waz_black,
-    color: theme.design.ayo.waz_white,
-    border: "2px solid white",
-    transition: "0.5s",
-    borderRadius: "25px",
+  // button: {
+  //   background: theme.design.ayo.waz_black,
+  //   color: theme.design.ayo.waz_white,
+  //   border: "3px solid white",
+  //   transition: "0.5s",
+  //   borderRadius: theme.spacing(1),
+  //   height: theme.spacing(5),
 
-    "&:hover": {
-      color: "black",
-      background: "white",
-    },
-  },
+  //   "&:hover": {
+  //     color: "black",
+  //     background: "white",
+  //   },
+  // },
 }));

@@ -3,35 +3,46 @@ import { makeStyles } from "@mui/styles";
 
 export const useNavStyles = makeStyles((theme: Theme) => ({
   root: {
-    // display: "flex",
     display: "flex",
-    // justifyContent: "flex-start",
     width: "100%",
     margin: 0,
     padding: 0,
     background: theme.design.ayo.waz_black,
-    height: "90px",
+    height: theme.spacing(10),
+    fontFamily: theme.design.font.openSans,
   },
   nav: {
     width: "90%",
     display: "flex",
     justifyContent: "space-between",
     margin: "auto",
+    alignItems: "center",
   },
   logo: {
     color: theme.design.ayo.waz_white,
+    height: theme.spacing(3),
+    fontWeight: theme.typography.fontWeightBold,
+    // margin:'auto'
   },
-  icon:{},
+ 
+  icon: {
+    color: theme.design.ayo.waz_white,
+    display: "flex",
+    width: "40%",
+    height: theme.spacing(15),
+  },
   navItems: {
     display: "flex",
-    justifyContent: "flex-end",
-    width: "70%",
+    justifyContent: "space-evenly",
+    width: "100%",
+    margin: "auto",
+    height: theme.spacing(5),
   },
 
   listContainer: {
     display: "flex",
     justifyContent: "Center",
-    width: "50%",
+    width: "100%",
     listStyle: "none",
   },
   listItem: {
@@ -39,6 +50,7 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     color: theme.design.ayo.waz_white,
     textDecoration: "none",
     margin: theme.spacing(3),
+    fontSize: theme.spacing(3),
   },
   heading: {
     // fontSize: theme.typography.fontSize + 28,
