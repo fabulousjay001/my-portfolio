@@ -11,11 +11,15 @@ const NavBar = () => {
         <div className={classes.logo}>
           <h1> Fab JAY</h1>
         </div>
-        <div className={classes.icon}>
+        <div className={classes.container}>
           <div className={classes.navItems}>
             <InstagramIcon />
-            <TwitterIcon />
-            <LinkedInIcon />
+            <a className={classes.icon}>
+              <TwitterIcon />
+            </a>
+            <a className={classes.icon}>
+              <LinkedInIcon />
+            </a>
           </div>
           <ul className={classes.listContainer}>
             <a href="#" className={classes.listItem}>

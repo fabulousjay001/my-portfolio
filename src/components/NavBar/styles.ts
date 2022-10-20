@@ -20,29 +20,25 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
   },
   logo: {
     color: theme.design.ayo.waz_white,
-    height: theme.spacing(3),
     fontWeight: theme.typography.fontWeightBold,
     // margin:'auto'
   },
- 
-  icon: {
+
+  container: {
     color: theme.design.ayo.waz_white,
     display: "flex",
-    width: "40%",
-    height: theme.spacing(15),
+    width: "50%",
   },
+  icon: {},
   navItems: {
     display: "flex",
-    justifyContent: "space-evenly",
-    width: "100%",
     margin: "auto",
-    height: theme.spacing(5),
   },
 
   listContainer: {
     display: "flex",
     justifyContent: "Center",
-    width: "100%",
+    width: "60%",
     listStyle: "none",
   },
   listItem: {
@@ -51,26 +47,15 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     textDecoration: "none",
     margin: theme.spacing(3),
     fontSize: theme.spacing(3),
+    transition: "0.3s",
+  
+    "&:hover": {
+      width:'100%',
+      borderBottom: "solid 3px white",
+    },
   },
-  heading: {
-    // fontSize: theme.typography.fontSize + 28,
-    // color: theme.design.colors.white,
-    // marginBottom: theme.spacing(3),
-    // fontFamily: theme.design.font.dmSans,
-    // textAlign: "center",
-    // [theme.breakpoints.down("sm")]: {
-    //   fontSize: theme.typography.fontSize + 16,
-    // },
-  },
+  heading: {},
   content: {},
-  btn: {
-    // [theme.breakpoints.down("sm")]: {
-    //   fontSize: theme.typography.fontSize + 2,
-    //   padding: theme.spacing(0.5, 4),
-    // },
-  },
-  img: {
-    // height: "232px",
-    // width: "100%",
-  },
+  btn: {},
+  img: {},
 }));

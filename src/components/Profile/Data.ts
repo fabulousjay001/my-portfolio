@@ -1,2 +1,2 @@
 export const Data =
-  " Open to building software apllications for Organizati various sizes";
+  " Open to building software apllications for Organization of  various sizes"

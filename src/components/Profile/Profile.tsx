@@ -15,14 +15,14 @@ const Profile = () => {
               <Typical
                 loop={Infinity}
                 steps={[
-                  "I am Adegbulu Ayomiposi  ",
-                  2000,
+                  "I am Adegbulu Ayomiposi",
+                  1000,
                   "A Frontend Dev",
-                  2000,
+                  1000,
                   "Enthuasiastic Dev",
-                  2000,
+                  1000,
                   "Goal oriented",
-                  2000,
+                  1000,
                   "React/React Js Dev",
                   1000,
                 ]}
@@ -31,14 +31,14 @@ const Profile = () => {
             <span className={classes.tagLine}>{Data}</span>
           </span>
           <div className={classes.option}>
-            <button className={classes.hire}> Hire Me</button>
+            <Button text="Hire Me" />
             <a href="" download="Ay.pdf">
-              <Button download="Download"/>
+              <Button text="Download" />
             </a>
           </div>
         </div>
         <div className={classes.headerImage}>
-          <img src={Images} className={classes.headerImage}></img>
+          <img src={Images} className={classes.headerImage} />
         </div>
       </div>
     </div>

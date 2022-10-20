@@ -5,7 +5,6 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
   root: {
     background: theme.design.ayo.waz_black,
     height: "100vh",
-    top: theme.spacing(0),
   },
   header: {
     fontSize: theme.spacing(5),
@@ -28,7 +27,9 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     borderRadius: "50%",
     margin: theme.spacing(5, 5, 0, 5),
   },
-  image: {},
+  image: {
+  
+  },
   text: {
     color: theme.design.ayo.waz_white,
     fontSize: theme.spacing(3),
@@ -41,7 +42,7 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(5),
     display: "flex",
     justifyContent: "space-between",
-    width: theme.spacing(30),
+    width: theme.spacing(40),
   },
   hire: {},
   // button: {

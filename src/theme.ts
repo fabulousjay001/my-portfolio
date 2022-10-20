@@ -145,6 +145,8 @@ export const theme: any = {
       waz_red: "#C23434",
       waz_peach: "#FAF8F7",
       waz_button: "#10b092",
+      ayo_gray: "#313536",
+      ayo_green: "#00E472",
     },
   },
   overrides: {
