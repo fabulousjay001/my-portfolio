@@ -3,17 +3,20 @@ import { makeStyles } from "@mui/styles";
 
 export const useTestimonialStyles = makeStyles((theme: Theme) => ({
   root: {
-    background: theme.design.ayo.waz_gray,
-    width: "100%",
-  },
-  testimonial: {
     background: theme.design.ayo.ayo_gray,
+    width: "100%",
+    color: theme.design.ayo.waz_white,
   },
+ 
+  lightmode: {
+    background: theme.design.ayo.dim_grey,
+    color: theme.design.ayo.waz_black,
+  },
+
   review: {
     width: "90%",
     marginLeft: theme.spacing(18),
     paddingTop: theme.spacing(3),
-    color: theme.design.ayo.waz_white,
   },
   comments: {
     margin: 0,
@@ -31,7 +34,6 @@ export const useTestimonialStyles = makeStyles((theme: Theme) => ({
   },
 
   quoteIcon: {
-    color: theme.design.ayo.waz_white,
   },
 
   container: {
@@ -46,6 +48,16 @@ export const useTestimonialStyles = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(3),
     width: theme.spacing(45),
     background: theme.design.ayo.waz_black,
+    borderRadius: theme.spacing(2),
+    height: theme.spacing(45),
+  },
+
+  lightCard: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: theme.spacing(3),
+    width: theme.spacing(45),
+    background: theme.design.ayo.waz_white,
     borderRadius: theme.spacing(2),
     height: theme.spacing(45),
   },
@@ -67,13 +79,16 @@ export const useTestimonialStyles = makeStyles((theme: Theme) => ({
   name: {
     color: theme.design.ayo.waz_white,
   },
+  nameLightMode: {
+    color: theme.design.ayo.waz_black,
+  },
+
   job: {
     color: theme.design.ayo.ayo_green,
   },
   description: {
     display: "flex",
     justifyContent: "center",
-    color: theme.design.ayo.waz_white,
     fontWeight: theme.typography.fontWeightLight,
     fontSize: theme.typography.fontSize * 1.5,
     width: "90%",
@@ -81,6 +96,6 @@ export const useTestimonialStyles = makeStyles((theme: Theme) => ({
   },
 
   text: {
-    color: theme.design.ayo.waz_white,
+    
   },
 }));

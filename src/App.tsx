@@ -8,6 +8,7 @@ import Profile from "./components/Profile/Profile";
 import Skill from "./components/Skill/Skill";
 import Testimonial from "./components/Testimonial/Testimonial";
 
+// import clx from "classnames";
 
 type ThemeContextProps = {
   theme: boolean;
@@ -26,13 +27,13 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <div>
+      <div>
         <NavBar />
         <Profile />
         <About />
         <Skill />
         <Testimonial />
-        </div>
+      </div>
     </ThemeContext.Provider>
   );
 }

@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTestimonialStyles } from "./styles";
 import { reviews } from "./Data";
 import Card from "./Card";
+import { ThemeContext } from "../../App";
 
 const Testimonial = (prop: any) => {
   const classes = useTestimonialStyles();
+  const theme = useContext(ThemeContext);
 
   return (
     <>
-      <div className={classes.testimonial}>
+      <div className={theme?.theme ? classes.root : classes.lightmode}>
         <div className={classes.review}>
           <h1 className={classes.comments}>What people are saying</h1>
           <h1 className={classes.Header}>Client</h1>
         </div>
         <div className={classes.cardContainer}>
-      
           <>
             {" "}
             {reviews.map((reviews) => {

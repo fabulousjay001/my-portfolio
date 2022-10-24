@@ -7,10 +7,9 @@ export const useAboutStyles = makeStyles((theme: Theme) => ({
     background: theme.design.ayo.ayo_gray,
     height: "700px",
     justifyContent: "space-evenly",
-  },
-  header: {
     color: theme.design.ayo.waz_white,
   },
+  header: {},
   image: {
     height: "576px",
     margin: theme.spacing(8.5),
@@ -20,7 +19,12 @@ export const useAboutStyles = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(16),
     width: "48%",
   },
-  text: {
-    color: theme.design.ayo.waz_white,
+  lightMode: {
+    display: "flex",
+    color: theme.design.ayo.waz_black,
+    background: theme.design.ayo.dim_grey,
+    height: "700px",
+    justifyContent: "space-evenly",
   },
+  text: {},
 }));

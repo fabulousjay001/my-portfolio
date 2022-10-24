@@ -2,6 +2,7 @@ import { useNavStyles } from "./styles";
 import { link } from "./NavData";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
+import ReactSwitch from "react-switch";
 
 type link = {
   url: string;

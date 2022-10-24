@@ -31,6 +31,7 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
       color: theme.design.ayo.waz_black,
     },
   },
+
   nav: {
     width: "90%",
     display: "flex",
@@ -59,8 +60,8 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
 
   listContainer: {
     display: "flex",
-    justifyContent: "Center",
-    width: "60%",
+    // justifyContent: "Center",
+    // width: "60%",
     listStyle: "none",
   },
   listItem: {
@@ -69,12 +70,7 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     textDecoration: "none",
     margin: theme.spacing(3),
     fontSize: theme.spacing(3),
-    transition: "0.3s",
 
-    "&:hover": {
-      width: "auto",
-      borderBottom: "solid 3px white",
-    },
   },
 
   heading: {},

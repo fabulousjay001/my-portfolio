@@ -4,15 +4,19 @@ import { Data } from "./Data";
 import Images from "../../../src/images/prof-pic.jpg";
 import Button from "../Button/Button";
 import { social } from "./Data";
+import { ThemeContext } from "../../App";
+import theme from "../../theme";
+import { useContext } from "react";
 
 const Profile = () => {
   const classes = useProfileStyles();
+  const theme = useContext(ThemeContext);
   return (
-    <div className={classes.root}>
-      <div className={classes.profilePage}></div>
+    <div className={theme?.theme ? classes.root : classes.lightmode}>
+      {/* <div className={classes.profilePage}></div> */}
       <div className={classes.profileDetails}>
         <div className={classes.profileDetailsRole}>
-          <span className={classes.text}>
+          <span className={theme?.theme ? classes.text : classes.lightmodetext}>
             <h1 className={classes.header}>
               <Typical
                 loop={Infinity}
@@ -39,12 +43,16 @@ const Profile = () => {
             </a>
           </div>
 
-          <ul className={classes.social}>
+          <ul className={theme?.theme ? classes.social : classes.socialLightMode}>
             {social.map((social) => {
               return (
                 <li className={classes.listItem}>
                   {" "}
-                  <a className={classes.icon} href={social.url}>
+                  <a
+                    className={
+                      theme?.theme ? classes.icon : classes.lightmodeicon
+                    }
+                    href={social.url}>
                     {social.icon}
                   </a>
                 </li>
