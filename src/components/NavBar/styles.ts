@@ -1,3 +1,4 @@
+import { ThemeContext } from "@emotion/react";
 import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -5,11 +6,30 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
   root: {
     display: "flex",
     width: "100%",
+    alignItems: "center",
     margin: 0,
     padding: 0,
     background: theme.design.ayo.waz_black,
+    color: theme.design.ayo.waz_white,
     height: theme.spacing(10),
     fontFamily: theme.design.font.openSans,
+  },
+  lightmode: {
+    display: "flex",
+    width: "100%",
+    alignItems: "center",
+    margin: 0,
+    padding: 0,
+    background: theme.design.ayo.waz_white,
+    color: theme.design.ayo.waz_black,
+    height: theme.spacing(10),
+    fontFamily: theme.design.font.openSans,
+    "& a": {
+      color: theme.design.ayo.waz_black,
+    },
+    "& div": {
+      color: theme.design.ayo.waz_black,
+    },
   },
   nav: {
     width: "90%",
@@ -21,7 +41,10 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
   logo: {
     color: theme.design.ayo.waz_white,
     fontWeight: theme.typography.fontWeightBold,
-    // margin:'auto'
+  },
+  logoName: {
+    width: theme.spacing(30),
+    paddingLeft: theme.spacing(12),
   },
 
   container: {
@@ -29,7 +52,6 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     width: "50%",
   },
-  icon: {},
   navItems: {
     display: "flex",
     margin: "auto",
@@ -48,12 +70,13 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     margin: theme.spacing(3),
     fontSize: theme.spacing(3),
     transition: "0.3s",
-  
+
     "&:hover": {
-      width:'100%',
+      width: "auto",
       borderBottom: "solid 3px white",
     },
   },
+
   heading: {},
   content: {},
   btn: {},

@@ -1,14 +1,17 @@
-// import { useAboutStyles } from "./Styles";
-import img from "../../images/corpershun.jpg";
-// import { Data } from "./Data";
+import { useSkillStyles } from "./styles";
+import { header, text } from "./Data";
 
-const About = () => {
-//   const classes = useAboutStyles();
-//   return (
-//     <div className={classes.root}>
-     
-//     </div>
-//   );
+
+const Skill = () => {
+  const classes = useSkillStyles();
+  return (
+    <div className={classes.root}>
+      <div className={classes.container}>
+        <h1 className={classes.header}>{header}</h1>
+        <p className={classes.text}>{text}</p>
+      </div>
+    </div>
+  );
 };
 
-export default About;
+export default Skill;

@@ -1,39 +1,36 @@
 import { useNavStyles } from "./styles";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { link } from "./NavData";
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+
+type link = {
+  url: string;
+  title: string;
+};
 
 const NavBar = () => {
   const classes = useNavStyles();
+  const theme = useContext(ThemeContext);
+
   return (
-    <div className={classes.root}>
+    <div className={theme?.theme ? classes.root : classes.lightmode}>
       <div className={classes.nav}>
         <div className={classes.logo}>
-          <h1> Fab JAY</h1>
-        </div>
-        <div className={classes.container}>
-          <div className={classes.navItems}>
-            <InstagramIcon />
-            <a className={classes.icon}>
-              <TwitterIcon />
-            </a>
-            <a className={classes.icon}>
-              <LinkedInIcon />
-            </a>
-          </div>
-          <ul className={classes.listContainer}>
-            <a href="#" className={classes.listItem}>
-              <li>Home</li>
-            </a>
-            <a href="#" className={classes.listItem}>
-              <li>About</li>
-            </a>
-            <a href="#" className={classes.listItem}>
-              <li>Testimonials</li>
-            </a>
-          </ul>
+          <h1 className={classes.logoName}> Fab jAY</h1>
         </div>
       </div>
+
+      <ul className={classes.listContainer}>
+        {link.map((link) => {
+          return (
+            <li>
+              <a className={classes.listItem} href={link.url}>
+                {link.title}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

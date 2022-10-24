@@ -6,6 +6,9 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     background: theme.design.ayo.waz_black,
     height: "100vh",
   },
+  profilePage: {
+    dispaly: "flex",
+  },
   header: {
     fontSize: theme.spacing(5),
   },
@@ -18,31 +21,45 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     color: theme.design.ayo.white,
   },
   profileDetailsRole: {
-    width: "90%",
+    width: "80%",
   },
 
   headerImage: {
     position: "absolute",
     height: "60vh",
     borderRadius: "50%",
-    margin: theme.spacing(5, 5, 0, 5),
+    margin: theme.spacing(5, 0, 0, 10),
   },
-  image: {
-  
-  },
+  image: {},
   text: {
     color: theme.design.ayo.waz_white,
     fontSize: theme.spacing(3),
   },
+
   wrapper: {
     marginTop: 0,
   },
   tagLine: { fontSize: theme.spacing(2.5) },
   option: {
-    marginTop: theme.spacing(5),
+    marginTop: theme.spacing(7),
     display: "flex",
     justifyContent: "space-between",
     width: theme.spacing(40),
+  },
+  container: {},
+  listItem: {
+    listStyle: "none",
+  },
+  social: {
+    display: "flex",
+    justifyContent: "flex-start",
+  },
+  icon: {
+    color: theme.design.ayo.waz_white,
+    textDecoration: "none",
+    margin: theme.spacing(3),
+    fontSize: theme.typography.fontSize,
+    transition: "0.3s",
   },
   hire: {},
   // button: {

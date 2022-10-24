@@ -9,9 +9,8 @@ export const useButtonStyles = makeStyles((theme: Theme) => ({
     color: theme.design.ayo.waz_white,
     border: "3px solid white",
     transition: "1s",
-    borderRadius: theme.spacing(1),
-    height: theme.spacing(5),
-    width: theme.spacing(14),
+    borderRadius: theme.spacing(4),
+    padding:theme.spacing(1.5,5),
     fontFamily: theme.design.font.openSans,
     fontSize: theme.spacing(2),
     fontWeight: theme.typography.fontWeightBold,
@@ -22,4 +21,8 @@ export const useButtonStyles = makeStyles((theme: Theme) => ({
      
     },
   },
+
+  contactUs: {
+    
+  }
 }));
