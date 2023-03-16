@@ -1,7 +1,9 @@
+/** @format */
+
 import { useProfileStyles } from "./styles";
 import Typical from "react-typical";
 import { Data } from "./Data";
-import Images from "../../../src/images/prof-pic.jpg";
+import Images from "../../images/prof-pic.jpg";
 import Button from "../Button/Button";
 import { social } from "./Data";
 import { ThemeContext } from "../../App";
@@ -12,56 +14,31 @@ const Profile = () => {
   const classes = useProfileStyles();
   const theme = useContext(ThemeContext);
   return (
-    <div className={theme?.theme ? classes.root : classes.lightmode}>
-      {/* <div className={classes.profilePage}></div> */}
-      <div className={classes.profileDetails}>
-        <div className={classes.profileDetailsRole}>
-          <span className={theme?.theme ? classes.text : classes.lightmodetext}>
-            <h1 className={classes.header}>
-              <Typical
-                loop={Infinity}
-                steps={[
-                  "I am Adegbulu Ayomiposi",
-                  1000,
-                  "A Frontend Dev",
-                  1000,
-                  "Enthuasiastic Dev",
-                  1000,
-                  "Goal oriented",
-                  1000,
-                  "React/React Js Dev",
-                  1000,
-                ]}
-              />
-            </h1>
-            <span className={classes.tagLine}>{Data}</span>
-          </span>
-          <div className={classes.option}>
-            <Button text="Hire Me" />
-            <a href="" download="Ay.pdf">
-              <Button text="Download" />
-            </a>
+    <div className={classes.root}>
+      <div className={classes.Container}>
+        <div className={classes.textContainer}>
+          <div className={classes.header}>
+            <p>Creative Front - End Developer.</p>
           </div>
-
-          <ul className={theme?.theme ? classes.social : classes.socialLightMode}>
-            {social.map((social) => {
-              return (
-                <li className={classes.listItem}>
-                  {" "}
-                  <a
-                    className={
-                      theme?.theme ? classes.icon : classes.lightmodeicon
-                    }
-                    href={social.url}>
-                    {social.icon}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          <div className={classes.description}>
+            Hello, I’m Ayo, a creative problem solver that help brands create
+            intuitive and accessible interfaces that meet user needs.
+          </div>
+          <div className={classes.buttonGroup}>
+            <button className={classes.leftBtn}>Let's talk</button>
+            <button className={classes.rightBtn}>view resume</button>
+          </div>
         </div>
-        <div className={classes.headerImage}>
-          <img src={Images} className={classes.headerImage} />
+
+        <div className={classes.imgContainer}>
+          <img src={Images} className={classes.img} />
+          <div className={classes.info}>
+            <div className={classes.test}>
+              I support designers and agencies with creative development
+            </div>
+            <div className={classes.social}></div>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>

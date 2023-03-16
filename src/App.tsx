@@ -1,3 +1,5 @@
+/** @format */
+
 import * as React from "react";
 import { useAppStyles } from "./styles";
 import { theme } from "./theme";
@@ -28,7 +30,7 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div>
-        <NavBar />
+        <NavBar url={""} title={""} id={0} />
         <Profile />
         <About />
         <Skill />

@@ -1,6 +1,8 @@
 import React from "react";
+import { NavTypes } from "./types";
 
-export const link = [
+
+export const link :NavTypes[]= [
   {
     id: 1,
     url: "/",
@@ -8,17 +10,17 @@ export const link = [
   },
   {
     id: 2,
-    url: "/About",
+    url: "/about",
     title: "About",
   },
   {
     id: 3,
-    url: "/Skill",
-    title: "Skill",
+    url: "/work",
+    title: "Work",
   },
   {
     id: 4,
-    url: "/Contact",
+    url: "/contact",
     title: "Contact",
   },
 ];

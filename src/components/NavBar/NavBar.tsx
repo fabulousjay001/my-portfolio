@@ -1,37 +1,69 @@
+/** @format */
+
 import { useNavStyles } from "./styles";
 import { link } from "./NavData";
-import { useContext } from "react";
+import { FC, useContext, useState } from "react";
 import { ThemeContext } from "../../App";
-import ReactSwitch from "react-switch";
+import Img from "../../../src/images/LOGO.png";
+import { Close, DarkMode, DragHandle, LightMode } from "@mui/icons-material";
+import { NavTypes } from "./types";
 
-type link = {
-  url: string;
-  title: string;
-};
-
-const NavBar = () => {
+const NavBar: FC<NavTypes> = ({}) => {
   const classes = useNavStyles();
   const theme = useContext(ThemeContext);
 
+  const [showLinks, setShowLinks] = useState(false);
+  const [brightness, setBrightness] = useState(false);
+
   return (
-    <div className={theme?.theme ? classes.root : classes.lightmode}>
-      <div className={classes.nav}>
-        <div className={classes.logo}>
-          <h1 className={classes.logoName}> Fab jAY</h1>
+    <div className={classes.root}>
+      <div className={classes.navContainer}>
+        <img src={Img} className={classes.logo} />
+
+        <div className={classes.menu}>
+          {showLinks ? (
+            <Close
+              style={{ fontSize: "60px" }}
+              className={classes.menuIcon}
+              onClick={() => setShowLinks(!showLinks)}
+            />
+          ) : (
+            <DragHandle
+              style={{ fontSize: "60px", }}
+              className={classes.menuIcon}
+              onClick={() => setShowLinks(!showLinks)}
+            />
+          )}
+
+          {showLinks && (
+            <>
+              {" "}
+              <div className={classes.menuContainer}>
+                <ul className={classes.unorderedList}>
+                  {link.map((link) => {
+                    return (
+                      <li>
+                        <a className={classes.listItem} href={link.url}>
+                          {link.title}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>{" "}
+              </div>
+            </>
+          )}
+        </div>
+        <div className={classes.left}>
+          <p className={classes.time}>10:28PM WAT</p>
+
+          {brightness ? (
+            <LightMode onClick={() => setBrightness(!brightness)} />
+          ) : (
+            <DarkMode onClick={() => setBrightness(!brightness)} />
+          )}
         </div>
       </div>
-
-      <ul className={classes.listContainer}>
-        {link.map((link) => {
-          return (
-            <li>
-              <a className={classes.listItem} href={link.url}>
-                {link.title}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };

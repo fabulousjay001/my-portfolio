@@ -1,3 +1,5 @@
+/** @format */
+
 import { createTheme, Theme as MuiTheme } from "@mui/material/styles";
 
 type ExtendedThemeOptions = {
@@ -117,7 +119,7 @@ export const theme: any = {
       waz_white: "#FFFFFF",
       waz_whiteAlpha: "#f9f9f9",
       waz_whiteAlpha100: "#F0F0F0",
-      waz_black: "#010E05",
+      waz_black: " #121212",
       waz_Grey: "#414141",
       waz_gray: "#BEBEBE",
       waz_blue: "#0889F7",
