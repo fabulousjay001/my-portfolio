@@ -29,29 +29,10 @@ const NavBar: FC<NavTypes> = ({}) => {
             />
           ) : (
             <DragHandle
-              style={{ fontSize: "60px", }}
+              style={{ fontSize: "60px" }}
               className={classes.menuIcon}
               onClick={() => setShowLinks(!showLinks)}
             />
-          )}
-
-          {showLinks && (
-            <>
-              {" "}
-              <div className={classes.menuContainer}>
-                <ul className={classes.unorderedList}>
-                  {link.map((link) => {
-                    return (
-                      <li>
-                        <a className={classes.listItem} href={link.url}>
-                          {link.title}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>{" "}
-              </div>
-            </>
           )}
         </div>
         <div className={classes.left}>
@@ -64,6 +45,24 @@ const NavBar: FC<NavTypes> = ({}) => {
           )}
         </div>
       </div>
+      {showLinks && (
+        <>
+          {" "}
+          <div className={classes.menuContainer}>
+            <ul className={classes.unorderedList}>
+              {link.map((link) => {
+                return (
+                  <li>
+                    <a className={classes.listItem} href={link.url}>
+                      {link.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 };

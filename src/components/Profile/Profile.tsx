@@ -9,6 +9,7 @@ import { social } from "./Data";
 import { ThemeContext } from "../../App";
 import theme from "../../theme";
 import { useContext } from "react";
+import { ArrowDownward } from "@mui/icons-material";
 
 const Profile = () => {
   const classes = useProfileStyles();
@@ -27,6 +28,14 @@ const Profile = () => {
           <div className={classes.buttonGroup}>
             <button className={classes.leftBtn}>Let's talk</button>
             <button className={classes.rightBtn}>view resume</button>
+          </div>
+
+          <div className={classes.circularText}>
+            <span className={classes.rotated}> Scroll down - Scroll down -</span>
+            <div className={classes.arrow}>
+              <ArrowDownward style={{ fontSize: "100px" }} />
+            </div>
+            
           </div>
         </div>
 

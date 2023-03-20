@@ -1,5 +1,6 @@
 /** @format */
 
+import { Translate } from "@mui/icons-material";
 import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -70,7 +71,26 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     padding: "8px",
     fontSize: "14px",
   },
-  info: { width: "230px" },
+  circularText: {
+    marginTop: "40px",
+    position: "fixed",
+    transform: "translate(0%, 50%)",
+    fontSize: theme.typography.fontSize + 8,
+    transition: "0.5s ease-out",
+  },
+  arrow: {
+    // position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "Translate(0%, 20%)",
+    cursor: "pointer",
+  },
+  rotated: {
+    radius: "80",
+  },
+  info: {
+    width: "230px",
+  },
   test: {},
   social: {},
 }));

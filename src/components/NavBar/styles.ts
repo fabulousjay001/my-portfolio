@@ -55,7 +55,7 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
   menuContainer: {
     position: "absolute",
     top: "80px",
-    
+    width: "100%",
   },
   unorderedList: {
     display: "flex",
@@ -68,9 +68,12 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     listStyle: "none",
     textDecoration: "none",
     fontWeight: 600,
-    marginTop: "44px",
     fontSize: "64px",
     color: "white",
+    display: "flex",
+    justifyContent: "center",
+    margin: 0,
+    padding:0
   },
   logo: {
     background: theme.design.ayo.waz_black,
