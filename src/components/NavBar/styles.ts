@@ -9,28 +9,10 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     margin: "auto",
     alignItems: "center",
-    background: theme.design.ayo.waz_black,
-    color: theme.design.ayo.waz_white,
     height: theme.spacing(10),
     fontFamily: "Clash Display",
   },
-  lightmode: {
-    display: "flex",
-    width: "100%",
-    alignItems: "center",
-    margin: 0,
-    padding: 0,
-    background: theme.design.ayo.waz_white,
-    color: theme.design.ayo.waz_black,
-    height: theme.spacing(10),
-    fontFamily: theme.design.font.openSans,
-    "& a": {
-      color: theme.design.ayo.waz_black,
-    },
-    "& div": {
-      color: theme.design.ayo.waz_black,
-    },
-  },
+ 
   navContainer: {
     width: "1440px",
     display: "flex",
@@ -55,6 +37,7 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
   menuContainer: {
     position: "absolute",
     top: "80px",
+    right:"40px",
     width: "100%",
   },
   unorderedList: {
@@ -62,7 +45,6 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     margin: "auto",
     listStyle: "none",
-    background: theme.design.ayo.waz_black,
   },
   listItem: {
     listStyle: "none",
@@ -73,7 +55,7 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "center",
     margin: 0,
-    padding:0
+    padding: 0,
   },
   logo: {
     background: theme.design.ayo.waz_black,

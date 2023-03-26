@@ -1,0 +1,21 @@
+/** @format */
+
+:root {
+  --color-dark-theme: #121212;
+  --color-light-theme: #ffffff;
+}
+
+body {
+  background: var(--color-dark-theme);
+  color: var(--color-light-theme);
+}
+body.dark {
+  background: var(--color-dark-theme);
+  color: var(--color-light-theme);
+  
+}
+
+body.light {
+  background: var(--color-light-theme);
+  color: var(--color-dark-theme);
+}

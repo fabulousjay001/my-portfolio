@@ -1,3 +1,5 @@
+/** @format */
+
 import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -14,6 +16,7 @@ export const useButtonStyles = makeStyles((theme: Theme) => ({
     fontFamily: theme.design.font.openSans,
     fontSize: theme.spacing(2),
     fontWeight: theme.typography.fontWeightBold,
+    cursor: "pointer",
 
     "&:hover": {
       color: "black",

@@ -7,34 +7,27 @@ import { createContext, useState } from "react";
 import About from "./components/About/About";
 import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Profile/Profile";
-import Skill from "./components/Skill/Skill";
-import Testimonial from "./components/Testimonial/Testimonial";
+import "./app.css";
+import { useThemeContext } from "./context/theme";
 
-// import clx from "classnames";
 
 type ThemeContextProps = {
-  theme: boolean;
-  toggleTheme: () => void;
+  theme: string;
+  setTheme: any;
 };
-export const ThemeContext = createContext<ThemeContextProps | null>(null);
+export const ThemeContext = createContext({} as ThemeContextProps);
 
 export default function App() {
   const classes = useAppStyles();
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState("");
 
-  const toggleTheme = () => {
-    setTheme(!theme);
-    return;
-  };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div data-theme='dark'>
         <NavBar url={""} title={""} id={0} />
         <Profile />
         <About />
-        <Skill />
-        <Testimonial />
       </div>
     </ThemeContext.Provider>
   );

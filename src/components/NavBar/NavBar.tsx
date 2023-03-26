@@ -3,17 +3,16 @@
 import { useNavStyles } from "./styles";
 import { link } from "./NavData";
 import { FC, useContext, useState } from "react";
-import { ThemeContext } from "../../App";
-import Img from "../../../src/images/LOGO.png";
-import { Close, DarkMode, DragHandle, LightMode } from "@mui/icons-material";
+import Img from "../../assets/images/LOGO.png";
+import { Close, DragHandle } from "@mui/icons-material";
 import { NavTypes } from "./types";
+import { ThemeContext } from "../../App";
+import Themetoggle from "../Themetoggle/Themetoggle";
 
 const NavBar: FC<NavTypes> = ({}) => {
   const classes = useNavStyles();
-  const theme = useContext(ThemeContext);
-
+const {theme}=useContext(ThemeContext)
   const [showLinks, setShowLinks] = useState(false);
-  const [brightness, setBrightness] = useState(false);
 
   return (
     <div className={classes.root}>
@@ -36,13 +35,8 @@ const NavBar: FC<NavTypes> = ({}) => {
           )}
         </div>
         <div className={classes.left}>
-          <p className={classes.time}>10:28PM WAT</p>
-
-          {brightness ? (
-            <LightMode onClick={() => setBrightness(!brightness)} />
-          ) : (
-            <DarkMode onClick={() => setBrightness(!brightness)} />
-          )}
+          <p className={classes.time}>10:28PM WAT </p>
+          <Themetoggle/>
         </div>
       </div>
       {showLinks && (
