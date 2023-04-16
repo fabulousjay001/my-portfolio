@@ -19,7 +19,7 @@ const Profile = () => {
       <div className={classes.Container}>
         <div className={classes.textContainer}>
           <div className={classes.header}>
-            <Typical
+            {/* <Typical
               loop={Infinity}
               steps={[
                 "Hello guys,",
@@ -31,7 +31,7 @@ const Profile = () => {
                 "For organisations of various sizes.",
                 3000,
               ]}
-            />
+            /> */}
             {/* <p> </p> */}
           </div>
           <div className={classes.description}>

@@ -6,17 +6,22 @@ import { makeStyles } from "@mui/styles";
 export const useAboutStyles = makeStyles((theme: Theme) => ({
   root: {
     display: "flex",
-    background: theme.design.ayo.ayo_gray,
+    background: theme.design.ayo.waz_black,
     height: "700px",
     justifyContent: "space-evenly",
     color: theme.design.ayo.waz_white,
+    fontFamily: "Clash display",
   },
-
-  lightMode: {
+  container: {
     display: "flex",
-    color: theme.design.ayo.waz_black,
-    background: theme.design.ayo.dim_grey,
-    height: "700px",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
+    width: "1440px",
+  },
+  content: {
+    width: "65%",
+  },
+  description: {
+    margin: 0,
+    fontSize: "40px",
   },
 }));

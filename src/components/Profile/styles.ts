@@ -14,13 +14,9 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     },
   },
   root: {
-    // background: theme.design.ayo.waz_black,
     height: "100vh",
     fontFamily: "Clash Display",
-    // background: "#121212",
-    // color: theme.design.ayo.waz_white,
   },
- 
 
   profileContainer: {},
   Container: {
@@ -79,6 +75,7 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
     width: "200px",
     height: "200px",
     borderRadius: "50%",
+    marginTop: "160px",
   },
   circularText: {
     position: "absolute",
