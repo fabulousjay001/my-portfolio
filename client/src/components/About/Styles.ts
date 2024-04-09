@@ -7,9 +7,8 @@ export const useAboutStyles = makeStyles((theme: Theme) => ({
 	root: {
 		// display: "flex",
 		margin: 'auto',
-		background: theme.design.ayo.waz_black,
 		justifyContent: 'space-evenly',
-		color: theme.design.ayo.waz_white,
+
 		fontFamily: 'Clash display',
 	},
 	container: {

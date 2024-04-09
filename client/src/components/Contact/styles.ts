@@ -26,6 +26,6 @@ export const useContactStyles = makeStyles((theme: Theme) => ({
 		marginTop: '64px',
 	},
 	contactContainer: {
-		border: '1px solid white',
+		border: '1px solid ',
 	},
 }));

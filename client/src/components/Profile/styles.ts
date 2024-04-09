@@ -14,9 +14,9 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		},
 	},
 	root: {
-		height: '100vh',
+		height: '70vh',
 		fontFamily: 'Clash Display',
-		marginTop: '30px',
+		marginTop: '80px',
 	},
 
 	profileContainer: {},
@@ -56,6 +56,7 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		height: '200px',
 		borderRadius: '50%',
 		marginTop: '160px',
+		top: '700px',
 	},
 	circularText: {
 		position: 'absolute',
@@ -92,7 +93,7 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		marginTop: '24px',
 	},
 	social: {},
-	url: { color: 'white', textDecoration: 'none' },
+	url: { textDecoration: 'none' },
 
 	infoText: {
 		display: 'flex',

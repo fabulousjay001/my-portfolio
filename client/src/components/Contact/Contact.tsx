@@ -38,7 +38,7 @@ const Contact = () => {
 		const changeField = evt.target.name;
 		const newValue = evt.target.value;
 
-		// console.log(changeField, newValue)
+		console.log(newValue);
 
 		setFormData((currData) => {
 			return { ...currData, [changeField]: newValue };

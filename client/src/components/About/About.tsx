@@ -2,27 +2,19 @@
 
 import { useAboutStyles } from './Styles';
 import { description } from './Data';
-import { ThemeContext } from '../../App';
-import {
-	// JSXElementConstructor,
-	// ReactElement,
-	// ReactFragment,
-	// ReactPortal,
-	useContext,
-} from 'react';
 import { DarkButton } from '../Button/Button';
 import LightButton from '../Button/Button';
 
-// import Description from './Data';
-
 const About = () => {
 	const classes = useAboutStyles();
-	const theme = useContext(ThemeContext);
+
 	return (
 		<div className={classes.root}>
 			<div className={classes.container}>
 				<p style={{ paddingTop: '24px', fontSize: '24px' }}>About</p>{' '}
-				<div className={classes.content}>
+				<div
+					className={classes.content}
+					style={{ fontWeight: 500 }}>
 					<p>{description.topParagraph}</p>
 					<p>{description.bottomParagraph}</p>
 					<div className={classes.btnGroup}>

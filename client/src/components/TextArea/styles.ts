@@ -5,18 +5,11 @@ import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 export const useTextAreaStyles = makeStyles((theme: Theme) => ({
-	root: {
-		// display: 'flex',
-		// margin: 'auto',
-		// alignItems: 'center',
-		// height: theme.spacing(9.5),
-		// fontFamily: 'Clash Display',
-	},
+	root: {},
 	form: {
 		width: '900px',
 		margin: 'auto',
 		marginTop: '50px',
-		color: 'white',
 	},
 	textArea: {
 		width: '100%',
@@ -26,13 +19,13 @@ export const useTextAreaStyles = makeStyles((theme: Theme) => ({
 		outline: 'none',
 		fontFamily: 'inherit',
 		resize: 'vertical',
-		background: '#121212',
-		color: 'white',
+		// background: '#121212',
+		// color: 'white',
 	},
 	linkContainer: { display: 'flex' },
 	socialInfo: {},
 	social: {},
-	url: { color: 'white', textDecoration: 'none' },
+	url: { textDecoration: 'none' },
 	formFooter: {
 		display: 'flex',
 		justifyContent: 'space-between',

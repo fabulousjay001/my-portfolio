@@ -1,10 +1,3 @@
-/**
- * eslint-disable jsx-a11y/img-redundant-alt
- *
- * @format
- */
-
-/* eslint-disable react/jsx-no-comment-textnodes */
 /** @format */
 
 import { useProfileStyles } from './styles';
@@ -14,11 +7,37 @@ import { social } from './Data';
 import TextRotation from '../TextRotation/TextRotation';
 import { DarkButton } from '../Button/Button';
 import LightButton from '../Button/Button';
+import { useContext } from 'react';
+import { ThemeContext } from '../../App';
+import { AppTheme } from '../../contexts/AppTheme';
 
 const Profile = () => {
 	const classes = useProfileStyles();
+	const { theme } = useContext(ThemeContext);
+
+	const profileStyle: AppTheme = {
+		dark: {
+			backgroundColor: '#121212',
+			color: 'white',
+		},
+		light: {
+			backgroundColor: 'white',
+			color: '#121212',
+		},
+		common: {
+			transition: 'all 1s ease',
+		},
+	};
+
+	const themeStyle = {
+		...profileStyle.common,
+		...(theme === 'light' ? profileStyle.light : profileStyle.dark),
+	};
+
 	return (
-		<div className={classes.root}>
+		<div
+			className={classes.root}
+			style={themeStyle}>
 			<div className={classes.Container}>
 				<div className={classes.hero}>
 					<div className={classes.headerText}>
@@ -49,6 +68,7 @@ const Profile = () => {
 											key={id}>
 											{' '}
 											<a
+												style={themeStyle}
 												href={url}
 												target="_blank"
 												rel="noopener noreferrer"
@@ -67,9 +87,10 @@ const Profile = () => {
 				</div>
 				<div
 					style={{
-						fontSize: '20px',
+						fontSize: '36px',
 						position: 'absolute',
-						top: '450px',
+						top: '500px',
+						width: '30%',
 					}}>
 					<Typical
 						loop={Infinity}

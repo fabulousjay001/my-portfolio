@@ -12,6 +12,7 @@ import { useTextAreaStyles } from './styles';
 import { TextareaAutosize } from '@material-ui/core';
 import LightButton from '../Button/Button';
 import { social } from '../Profile/Data';
+import { AppTheme } from '../../contexts/AppTheme';
 
 interface TextAreaProps {
 	label: string; // Define the type of the label prop
@@ -22,32 +23,53 @@ interface TextAreaProps {
 const TextArea = ({ label }: TextAreaProps) => {
 	const [value, setValue] = useState('');
 	const classes = useTextAreaStyles();
-	const theme = useContext(ThemeContext);
+	const { theme } = useContext(ThemeContext);
+
+	const textAreaStyle: AppTheme = {
+		dark: {
+			backgroundColor: '#121212',
+			color: 'white',
+		},
+		light: {
+			backgroundColor: 'white',
+			color: '#121212',
+		},
+		common: {
+			transition: 'all 1s ease',
+		},
+	};
+
+	const themeStyle = {
+		...textAreaStyle.common,
+		...(theme === 'light' ? textAreaStyle.light : textAreaStyle.dark),
+	};
 
 	const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-		setValue(event.target.value); // Update value state when textarea content changes
+		setValue(event.target.value);
+
+		// Update value state when textarea content changes
 	};
-	const handlChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-		setValue(event.target.value); // Update value state when textarea content changes
-	};
+
 	return (
 		<section className={classes.root}>
-			{label && <label>{label}</label>}
+			<label>{label}</label>
 			<form className={classes.form}>
 				<TextareaAutosize
 					className={classes.textArea}
 					onChange={handleChange}
 					name="Full Name"
-				/>
-				<TextareaAutosize
-					className={classes.textArea}
-					onChange={handlChange}
-					name="email"
+					style={themeStyle}
 				/>
 				<TextareaAutosize
 					className={classes.textArea}
 					onChange={handleChange}
-					style={{ height: '500px' }}
+					name="email"
+					style={themeStyle}
+				/>
+				<TextareaAutosize
+					className={classes.textArea}
+					onChange={handleChange}
+					style={{ ...themeStyle, height: '500px' }}
 					name="discription"
 				/>
 				<div className={classes.formFooter}>
@@ -66,7 +88,8 @@ const TextArea = ({ label }: TextAreaProps) => {
 											href={url}
 											target="_blank"
 											rel="noopener noreferrer"
-											className={classes.url}>
+											className={classes.url}
+											style={themeStyle}>
 											<p className={classes.infoText}>
 												{text}
 												{icon} <span> {dash}</span>

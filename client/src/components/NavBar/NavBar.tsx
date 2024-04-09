@@ -20,13 +20,35 @@ import Img from '../../assets/images/LOGO.png';
 import { Close, DragHandle } from '@mui/icons-material';
 import { NavTypes } from './types';
 import { ThemeContext } from '../../App';
-import Themetoggle from '../Themetoggle/Themetoggle';
+import Themetoggle from '../../contexts/ThemeToggle';
 import zIndex from '@mui/material/styles/zIndex';
+import { AppTheme } from '../../contexts/AppTheme';
+import Clock from '../Clock/Clock';
 
 const NavBar: FC<NavTypes> = () => {
 	const classes = useNavStyles();
-	const { theme } = useContext(ThemeContext);
 	const [showLinks, setShowLinks] = useState(false);
+
+	const { theme } = useContext(ThemeContext);
+
+	const navStyle: AppTheme = {
+		dark: {
+			backgroundColor: '#121212',
+			color: 'white',
+		},
+		light: {
+			backgroundColor: 'white',
+			color: '#121212',
+		},
+		common: {
+			transition: 'all 1s ease',
+		},
+	};
+
+	const themeStyle = {
+		...navStyle.common,
+		...(theme === 'light' ? navStyle.light : navStyle.dark),
+	};
 
 	return (
 		<div className={classes.root}>
@@ -35,10 +57,9 @@ const NavBar: FC<NavTypes> = () => {
 					src={Img}
 					className={classes.logo}
 				/>
-
 				<div
 					className={classes.menu}
-					style={{ zIndex: 1 }}>
+					style={{ ...themeStyle }}>
 					{showLinks ? (
 						<Close
 							style={{ fontSize: '50px', cursor: 'pointer' }}
@@ -54,21 +75,24 @@ const NavBar: FC<NavTypes> = () => {
 					)}
 				</div>
 				<div className={classes.left}>
-					<p className={classes.time}>10:28PM WAT </p>
+					<Clock />
 					<Themetoggle />
 				</div>
 			</div>
+
 			{showLinks && (
 				<>
-					{' '}
 					<div className={classes.menuContainer}>
-						<ul className={classes.unorderedList}>
+						<ul
+							className={classes.unorderedList}
+							style={themeStyle}>
 							{link.map((link) => {
 								return (
 									<li>
 										<a
 											className={classes.listItem}
-											href={link.url}>
+											href={link.url}
+											style={themeStyle}>
 											{link.title}
 										</a>
 									</li>
