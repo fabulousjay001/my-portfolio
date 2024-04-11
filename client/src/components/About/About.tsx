@@ -11,10 +11,18 @@ const About = () => {
 	return (
 		<div className={classes.root}>
 			<div className={classes.container}>
-				<p style={{ paddingTop: '24px', fontSize: '24px' }}>About</p>{' '}
+				<p
+					style={{
+						paddingTop: '24px',
+						fontSize: '24px',
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
+					About
+				</p>{' '}
 				<div
 					className={classes.content}
-					style={{ fontWeight: 500 }}>
+					style={{ fontWeight: 400 }}>
 					<p>{description.topParagraph}</p>
 					<p>{description.bottomParagraph}</p>
 					<div className={classes.btnGroup}>

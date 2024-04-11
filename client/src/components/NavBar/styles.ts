@@ -19,6 +19,9 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'space-between',
 		margin: 'auto',
 		alignItems: 'center',
+		[theme.breakpoints.down('sm')]: {
+			justifyContent: 'space-around',
+		},
 	},
 	navItem: {},
 	menu: {
@@ -33,13 +36,16 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
 		cursor: 'pointer',
 		width: '150px',
 		fontWeight: 'bold',
+		[theme.breakpoints.down('sm')]: {
+			width: 'auto',
+		},
 	},
 	time: {},
 	menuContainer: {
 		position: 'absolute',
 		top: '82px',
 		width: '100%',
-		// zIndex: 1,
+		zIndex: 1,
 	},
 	unorderedList: {
 		display: 'flex',
@@ -47,6 +53,9 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
 		margin: 'auto',
 		listStyle: 'none',
 		paddingRight: '140px',
+		[theme.breakpoints.down('sm')]: {
+			paddingRight: '48px',
+		},
 	},
 	listItem: {
 		listStyle: 'none',
@@ -57,6 +66,9 @@ export const useNavStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'center',
 		margin: 0,
 		padding: 0,
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '44px',
+		},
 	},
 	logo: {
 		background: theme.design.ayo.waz_black,

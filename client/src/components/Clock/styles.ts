@@ -5,5 +5,10 @@ import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 export const useClockStyles = makeStyles((theme: Theme) => ({
-	time: { fontSize: '16px' },
+	time: {
+		fontSize: '16px',
+		[theme.breakpoints.down('sm')]: {
+			display: 'none',
+		},
+	},
 }));

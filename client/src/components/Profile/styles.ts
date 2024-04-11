@@ -17,6 +17,10 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		height: '70vh',
 		fontFamily: 'Clash Display',
 		marginTop: '80px',
+		[theme.breakpoints.down('sm')]: {
+			background: 'red',
+			marginTop: '10px',
+		},
 	},
 
 	profileContainer: {},
@@ -31,23 +35,52 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		width: '80%',
 	},
 	headerText: {
-		fontSize: '80px',
+		fontSize: '72px',
 		fontWeight: 600,
 		width: '100%',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '36px',
+			width: '30%',
+			marginLeft: '24px',
+		},
 	},
-	btn: { display: 'flex', gap: 20, width: '400px' },
+	btn: {
+		display: 'flex',
+		gap: 20,
+		width: '400px',
+		marginTop: '200px',
+		[theme.breakpoints.down('sm')]: {
+			marginTop: '70px',
+
+			width: '352px',
+			justifyContent: 'space-around',
+		},
+	},
 	description: {
 		fontSize: '24px',
 		width: '80%',
 	},
 
-	hero: { display: 'flex', justifyContent: 'space-between' },
-	imgContainer: {},
+	hero: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		[theme.breakpoints.down('sm')]: {
+			display: 'block',
+		},
+	},
+	imgContainer: { width: '100%' },
 	img: {
-		marginTop: '180px',
-		height: '500px',
-		width: ' 600px',
+		marginTop: '130px',
+		height: '40vh',
+		width: ' 100%',
 		objectFit: 'cover',
+		[theme.breakpoints.down('sm')]: {
+			marginTop: '20px',
+			width: '360px',
+			marginLeft: '24px',
+			marginRight: '24px',
+			// height: '30vh',
+		},
 	},
 
 	circle: {
@@ -57,6 +90,7 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		borderRadius: '50%',
 		marginTop: '160px',
 		top: '700px',
+		[theme.breakpoints.down('sm')]: {},
 	},
 	circularText: {
 		position: 'absolute',
@@ -85,14 +119,15 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		width: '480px',
+		[theme.breakpoints.down('sm')]: { width: '300px', marginLeft: '30px' },
 	},
 	test: {},
 	dash: { width: '20px' },
 
 	socialInfo: {
-		marginTop: '24px',
+		// marginTop: '24px',
 	},
-	social: {},
+	social: { width: '100%' },
 	url: { textDecoration: 'none' },
 
 	infoText: {
@@ -100,6 +135,8 @@ export const useProfileStyles = makeStyles((theme: Theme) => ({
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		fontSize: '20px',
-		fontWeight: 500,
+		fontWeight: 'bold',
+
+		[theme.breakpoints.down('sm')]: { fontSize: '16px' },
 	},
 }));

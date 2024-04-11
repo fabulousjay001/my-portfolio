@@ -10,6 +10,7 @@ import LightButton from '../Button/Button';
 import { useContext } from 'react';
 import { ThemeContext } from '../../App';
 import { AppTheme } from '../../contexts/AppTheme';
+import { Box } from '@mui/material';
 
 const Profile = () => {
 	const classes = useProfileStyles();
@@ -43,6 +44,39 @@ const Profile = () => {
 					<div className={classes.headerText}>
 						{' '}
 						Creative Front - End <span>Developer.</span>{' '}
+						<div>
+							<Box
+								sx={{
+									fontSize: '36px',
+									position: 'absolute',
+									width: '25%',
+									fontWeight: 'normal',
+									'@media (max-width:650px)': {
+										position: 'absolute',
+										top: '200px',
+										width: '90%',
+										fontSize: '20px',
+									},
+									'@media (min-width:960px)': {},
+								}}>
+								<Typical
+									loop={Infinity}
+									steps={[
+										'Hello guys,',
+										2000,
+										"I'm Ayo, a creative frontend developer.",
+										2000,
+										'I help brands build creative, intuitive ',
+
+										2000,
+										'and accessible interfaces that meets user requirements.',
+
+										3000,
+										'',
+									]}
+								/>
+							</Box>
+						</div>
 						<div
 							className={classes.btn}
 							style={{ cursor: 'pointer' }}>
@@ -75,7 +109,8 @@ const Profile = () => {
 												className={classes.url}>
 												<p className={classes.infoText}>
 													{text}
-													{icon} <span> {dash}</span>
+													{icon}{' '}
+													<span style={{ marginRight: '6px' }}> {dash}</span>
 												</p>{' '}
 											</a>
 										</div>
@@ -84,30 +119,6 @@ const Profile = () => {
 							})}
 						</div>
 					</div>
-				</div>
-				<div
-					style={{
-						fontSize: '36px',
-						position: 'absolute',
-						top: '500px',
-						width: '30%',
-					}}>
-					<Typical
-						loop={Infinity}
-						steps={[
-							'Hello guys,',
-							2000,
-							"I'm Ayo, a creative frontend developer.",
-							2000,
-							'I help brands build creative , intuitive ,and ',
-
-							2000,
-							'accessible interfaces that meets user requirements.',
-
-							3000,
-							'',
-						]}
-					/>
 				</div>
 
 				<TextRotation />

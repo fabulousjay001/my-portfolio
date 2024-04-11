@@ -21,6 +21,10 @@ export const useTextRotationStyles = makeStyles((theme: Theme) => ({
 		width: '200px',
 		height: '200px',
 		borderRadius: '50%',
+		[theme.breakpoints.down('sm')]: {
+			top: '90%',
+			left: '25%',
+		},
 	},
 	circularText: {
 		position: 'absolute',

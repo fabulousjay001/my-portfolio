@@ -10,6 +10,12 @@
  * @format
  */
 
+/**
+ * eslint-disable jsx-a11y/alt-text
+ *
+ * @format
+ */
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /** @format */
 
@@ -21,9 +27,9 @@ import { Close, DragHandle } from '@mui/icons-material';
 import { NavTypes } from './types';
 import { ThemeContext } from '../../App';
 import Themetoggle from '../../contexts/ThemeToggle';
-import zIndex from '@mui/material/styles/zIndex';
 import { AppTheme } from '../../contexts/AppTheme';
 import Clock from '../Clock/Clock';
+import { useTheme } from '@mui/material/styles';
 
 const NavBar: FC<NavTypes> = () => {
 	const classes = useNavStyles();
@@ -62,7 +68,10 @@ const NavBar: FC<NavTypes> = () => {
 					style={{ ...themeStyle }}>
 					{showLinks ? (
 						<Close
-							style={{ fontSize: '50px', cursor: 'pointer' }}
+							style={{
+								fontSize: '50px',
+								cursor: 'pointer',
+							}}
 							className={classes.menuIcon}
 							onClick={() => setShowLinks(!showLinks)}
 						/>

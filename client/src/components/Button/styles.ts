@@ -25,6 +25,11 @@ export const useButtonStyles = makeStyles((theme: Theme) => ({
 			color: 'black',
 			background: 'white',
 		},
+
+		[theme.breakpoints.down('sm')]: {
+			width: '160px',
+			fontSize: theme.spacing(1.5),
+		},
 	},
 	buttonLight: {
 		background: theme.design.ayo.waz_white,
@@ -40,6 +45,9 @@ export const useButtonStyles = makeStyles((theme: Theme) => ({
 		'&:hover': {
 			color: theme.design.ayo.waz_white,
 			background: theme.design.ayo.waz_black,
+		},
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing(1, 3),
 		},
 	},
 

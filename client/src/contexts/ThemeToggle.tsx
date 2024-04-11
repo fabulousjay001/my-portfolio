@@ -1,57 +1,64 @@
 /** @format */
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { ThemeContext } from '../App';
+import { AppTheme } from './AppTheme';
 
 const ThemeToggle = () => {
 	const { theme, setTheme } = useContext(ThemeContext);
+	const [show, setShow] = useState(false);
+
+	const iconStyle: AppTheme = {
+		dark: {
+			backgroundColor: 'white',
+			color: 'black',
+		},
+		light: {
+			backgroundColor: 'black',
+			color: 'white',
+		},
+		common: {
+			transition: 'all 1s ease',
+		},
+	};
+
+	const themeStyle = {
+		...iconStyle.common,
+		...(theme === 'light' ? iconStyle.light : iconStyle.dark),
+	};
 
 	const handleThemeToggle = () => {
 		setTheme(theme === 'light' ? 'dark' : 'light');
+		setShow(!show);
+
+		console.log('yes');
 	};
 
 	return (
 		<div>
-			{/* {value === 'light' ? (
-                <DarkModeIcon
-                    style={{
-                        background: 'black',
-                        color: 'white',
-                        borderRadius: '50%',
-                        width: '30px',
-                        fontSize: '30px',
-                    }}
-                    onClick={() => {
-                        handleSetValue('dark'); // Update theme to dark first
-                        document.body.className = 'dark'; // Then update body class
-                    }}
-                />
-            ) : (
-                <DarkModeIcon
-                    style={{
-                        background: 'white',
-                        color: 'black',
-                        borderRadius: '50%',
-                        width: '30px',
-                        fontSize: '30px',
-                    }}
-                    onClick={() => {
-                        handleSetValue('light'); // Update theme to light first
-                        document.body.className = 'light'; // Then update body class
-                    }}
-                />
-
-            )} */}
-
-			<DarkModeIcon
-				onClick={handleThemeToggle}
-				style={{
-					borderRadius: '50%',
-					width: '30px',
-					fontSize: '30px',
-				}}
-			/>
+			{show && theme ? (
+				<LightModeIcon
+					style={{
+						borderRadius: '50%',
+						width: '30px',
+						fontSize: '30px',
+						...themeStyle,
+					}}
+					onClick={handleThemeToggle}
+				/>
+			) : (
+				<DarkModeIcon
+					style={{
+						borderRadius: '50%',
+						width: '30px',
+						fontSize: '30px',
+						...themeStyle,
+					}}
+					onClick={handleThemeToggle}
+				/>
+			)}
 		</div>
 	);
 };

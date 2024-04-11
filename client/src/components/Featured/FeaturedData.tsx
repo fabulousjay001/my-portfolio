@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { ProjectDataTypes } from './types';
-import eatup from '../../assets/images/eatup.png';
-import jay from '../../assets/images/fabjaystore.png';
-import elegante from '../../assets/images/elegante.png';
+import eatup from '../../assets/images/eatup.jpeg';
+import jay from '../../assets/images/fabjaystore.jpeg';
+import elegante from '../../assets/images/elegante.jpeg';
 import profile from '../../assets/images/portfolio.png';
 
 export const link: ProjectDataTypes[] = [
